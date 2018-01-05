@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 __author__="Ya yifan"
 import math
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 class Integral:
 	'''
 	Calculate the integral of the equation
@@ -32,14 +34,17 @@ class Integral:
 
 	#Calculate
 	def __call__(self):	
-		results=[]
+		results=[]#store results to draw y axis in figure later
+		t=0
+		time=[]#store time of the calculation to draw x axis in figure
 		step=self.__default_step
 		while True:
 			#variable initialization
 			x=self.__start
 			result=float()
-
-			# differential of the variable x
+			
+			#differential of the variable x
+			
 			dx=(self.__end-self.__start)/step
 			while x<=self.__end:
 				result+=eval(self.__equation)*dx
@@ -48,9 +53,18 @@ class Integral:
 			#judge the precision
 			if step!=1 and math.fabs(result-results[-1])<self.__precision:
 				break
+			t+=1
+			time.append(t)
 			results.append(result)
-			print(result)	
 			step*=2
+
+		#the figure of rusults
+		plt.figure('result')
+		plt.title('Variation figure of result')
+		plt.xlabel('Calculation time')
+		plt.ylabel('Result')
+		plt.plot(time,results)
+		plt.show()
 		return results[-1]
 
 		
