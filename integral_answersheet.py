@@ -3,6 +3,31 @@ __author__="Ya yifan"
 import math
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+
+'''
+as the following code
+just directly input common mathematical elementary functions and values
+like pi,cos(x),sin(x)...
+for nth root, you have to input as x**(1/n)
+for logn(x), you have to input as log(x,n)
+for the mathematical value of pi, you have to input as pi or PI
+for inverse hyperbolic functions, you have to input as arsinh or arsh
+'''
+pi=PI=math.pi
+e=math.e
+cos=math.cos
+sin=math.sin
+tan=math.tan
+log=math.log
+arcsin=math.asin
+arccos=math.acos
+arctan=math.atan
+sh=math.sinh
+ch=math.cosh
+th=math.tanh
+arsinh=arsh=math.asinh
+arcosh=arch=math.acosh
+artanh=arth=math.atanh
 class Integral:
 	'''
 	Calculate the integral of the equation
