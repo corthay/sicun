@@ -3,16 +3,9 @@ __author__="Ya yifan"
 import math
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from math import sin,cos,tan,pi,e,log,asin,acos,atan,sinh,cosh,tanh,asinh,acosh,atanh
+from math import *
 '''
-just directly input common mathematical elementary functions and values
-like pi,cos(x),sin(x)...
-for the mathematical value of pi, you have to input as pi
-for nth root, you have to input as x**(1/n)
-for logn(x), you have to input as log(x,n)
-for Inverse trigonometric functions, you havt to input as asin()
-for hyperbolic functions, you have to input as sinh()
-for inverse hyperbolic functions, you have to input as asinh()
+input common mathematical elementary functions and values according to the standard of math module
 '''
 
 class Integral:
